@@ -31,7 +31,7 @@ namespace Logica.Implementaciones
                 Edad = a.Edad,
                 Sexo = a.Sexo,
                 IdTipo = a.IdTipo,
-                TipoNombre = a.Tipo?.Nombre, // Asegurate de hacer Include()
+                TipoNombre = a.Tipo?.Nombre,
                 DuenoId = a.DuenoId,
                 NombreDueno = $"{a.Dueno?.Nombre} {a.Dueno?.Apellido}"
             }).ToList();
@@ -41,7 +41,10 @@ namespace Logica.Implementaciones
         {
             var a = await _repo.ObtenerPorIdAsync(id);
             if (a == null)
+            {
                 return null;
+            }
+                
 
             return new AnimalDTO
             {
@@ -50,7 +53,7 @@ namespace Logica.Implementaciones
                 Raza = a.Raza,
                 Edad = a.Edad,
                 Sexo = a.Sexo,
-                IdTipo = a.IdTipo, // o a.IdTipo, según tu modelo
+                IdTipo = a.IdTipo, 
                 TipoNombre = a.Tipo?.Nombre,
                 DuenoId = a.DuenoId,
                 NombreDueno = $"{a.Dueno?.Nombre} {a.Dueno?.Apellido}"

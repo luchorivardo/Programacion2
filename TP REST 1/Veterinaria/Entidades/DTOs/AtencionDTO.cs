@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entidades.Entidades
+namespace Entidades.DTOs
 {
-    public class Atencion
+    public class AtencionDTO
     {
         public int Id { get; set; }
         public string MotivoConsulta { get; set; }
         public string Tratamiento { get; set; }
         public string Medicamentos { get; set; }
         public DateTime FechaAtencion { get; set; }
-        public int AnimalId { get; set; }
-        public Animal Animal { get; set; }
+        public string NombreAnimal { get; set; }
     }
 }
+

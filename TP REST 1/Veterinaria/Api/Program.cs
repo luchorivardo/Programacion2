@@ -20,6 +20,8 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("AppDbContext")))
 
 builder.Services.AddScoped<IAnimalesLogic, AnimalesLogic>();
 builder.Services.AddScoped<IAnimalRepositorio, AnimalRepositorio>();
+builder.Services.AddScoped<IAtencionRepositorio, AtencionRepositorio>();
+builder.Services.AddScoped<IAtencionesLogic, AtencionesLogic>();
 
 var app = builder.Build();
 
