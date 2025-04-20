@@ -22,6 +22,10 @@ builder.Services.AddScoped<IAnimalesLogic, AnimalesLogic>();
 builder.Services.AddScoped<IAnimalRepositorio, AnimalRepositorio>();
 builder.Services.AddScoped<IAtencionRepositorio, AtencionRepositorio>();
 builder.Services.AddScoped<IAtencionesLogic, AtencionesLogic>();
+builder.Services.AddScoped<IDuenoRepositorio, DuenoRepositorio>();
+builder.Services.AddScoped<ITipoRepositorio, TipoRepositorio>();
+builder.Services.AddScoped<IDuenoLogic, DuenoLogic>();
+builder.Services.AddScoped<ITipoLogic, TipoLogic>();
 
 var app = builder.Build();
 
