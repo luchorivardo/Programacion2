@@ -27,8 +27,11 @@ namespace Api.Controllers
         public async Task<IActionResult> Get(int id)
         {
             var animal = await _servicio.ObtenerPorIdAsync(id);
-            if (animal == null) return NotFound();
-            return Ok(animal);
+            if (animal == null)
+            {
+                return NotFound();
+            }
+                return Ok(animal);
         }
 
         [HttpPost]
