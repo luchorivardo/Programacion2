@@ -68,7 +68,7 @@ namespace HttpClientAnimalApp
             response.EnsureSuccessStatusCode();
             return response.Headers.Location;
         }
-        static async Task<Uri> CrearAtencionAsync(CrearDuenoDTO Atencion)
+        static async Task<Uri> CrearAtencionAsync(CrearAtencionDTO Atencion)
         {
             HttpResponseMessage response = await client.PostAsJsonAsync("api/atencion", Atencion);
             response.EnsureSuccessStatusCode();
@@ -126,13 +126,14 @@ namespace HttpClientAnimalApp
             {
                 try
                 {
-                    Console.WriteLine("\nSeleccione una opción:");
+                    Console.WriteLine("Seleccione una opción: ");
                     Console.WriteLine("1 - Crear un animal");
                     Console.WriteLine("2 - Mostrar todos los animales");
                     Console.WriteLine("3 - Mostrar un animal por ID");
                     Console.WriteLine("4 - Eliminar un animal por ID");
                     Console.WriteLine("5 - Actualizar un animal por ID");
-                    Console.WriteLine("6 - Crear un duenio");
+                    Console.WriteLine("6 - Crear un Dueño");
+                    Console.WriteLine("7 - Crear una Atencion");
                     Console.WriteLine("0 - Salir");
                     Console.Write("Opción: ");
 
@@ -242,7 +243,7 @@ namespace HttpClientAnimalApp
                                      AnimalId = 5
                                 };
 
-                                var urlAtencion = await CrearDuenioAsync(atencion);
+                                var urlAtencion = await CrearAtencionAsync(atencion);
                                 Console.WriteLine($"Animal creado en: {urlAtencion}");
                                 break;
 
