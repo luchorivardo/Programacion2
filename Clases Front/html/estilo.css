@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(218, 218, 218);
+    
+}
+#titulo {
+    color: peru;
+}
+
+button {
+    background-color: peru;
+    color: black;
+    border-radius: 10px;
+    
+    
+}
+
+.claseLabel {
+    font-size: 20px;
+    border-width: 2px;
+    
+    
+}
+

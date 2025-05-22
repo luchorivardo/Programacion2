@@ -1,0 +1,62 @@
+#general {
+    height: fit-content;
+    width: 300px;
+    background-color: darkcyan;
+    padding-left: 10px;
+}
+#bienvenido {
+    padding-left: 55px;
+}
+#divIngrese {
+    padding-bottom: 10px;
+}
+#divUsuario {
+    padding-bottom: 10px;
+}
+#divContraseña{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#login {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+
+#ingrese {
+    padding-left: 10px;
+}
+#usuario {
+    padding-left: 10px;
+    padding-right: 32px;
+    
+}
+#contraseña {
+    padding-right: 21px;
+}
+#olvidaste {
+    padding-left: 5px;
+}
+
+
+#generalTabla {
+    padding-top: 2cqb;
+}
+tr {
+    border: solid;
+}
+td, th {
+
+    padding-right: 10px;
+    border: solid;
+    border-spacing: 5px;
+    border-color: rgba(128, 128, 128, 0.548);
+    text-align: left;
+    font-family: sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
