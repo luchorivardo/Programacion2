@@ -1,4 +1,10 @@
-body{
-    background-color: red;
-    
+#formularioCrear{
+
+    height: auto;
+    width: auto;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+.form-control{
+    width: 200px;
 }
