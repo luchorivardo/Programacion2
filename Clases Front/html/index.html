@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1 id="titulo">Registrar persona</h1>
-    <input type="text" placeholder="Usuario">
+    <input id="textUsuario" type="text" placeholder="Usuario">
      <br><br>
-    <input type="text" placeholder="Apellido">
+    <input id="textApellido" type="text" placeholder="Apellido">
      <br><br>
      <select>
             <option value="option1">Masculino</option>
@@ -24,10 +24,61 @@
             <option value="option2">Rafaela</option>
      </select>
       <br><br>
-    <button>Ingresar</button>
-    <button>Cancelar</button>
+    <button onclick="alertaBtGuardar()">Guardar</button>
+    <button onclick="limpiarCampos()">Cancelar</button>
     <br><br>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREaHX19tExG-9FTuUMF1qDWtaggDzKFS1R0w&s" width="400" height="300">
      <label class="claseLabel">hola</label>
+
+     <script src="script.js"></script>
 </body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+    <style>
+        #mensajeError {
+            color: red;
+            display: none;
+        }
+    </style>
+      
+</head>
+        <body>
+            <h1 id="titulo">Registrar persona</h1>
+            <input id="textUsuario" type="text" placeholder="Usuario">
+            <br><br>
+            <input id="textApellido" type="text" placeholder="Apellido">
+            <br><br>
+            <select id="sexo">
+                <option value="">Seleccione sexo</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
+            <br><br>
+            <input type="date" id="fechaNacimiento">
+            <br><br>
+            <select id="ciudad">
+                <option value="">Seleccione ciudad</option>
+                <option value="Sunchales">Sunchales</option>
+                <option value="Rafaela">Rafaela</option>
+            </select>
+            <br><br>
+            <button onclick="alertaBtGuardar()">Guardar</button>
+            <button onclick="limpiarCampos()">Cancelar</button>
+            <br><br>
+
+            <div id="mensajeError"></div>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREaHX19tExG-9FTuUMF1qDWtaggDzKFS1R0w&s" width="400" height="300">
+            <label class="claseLabel">hola</label>
+            <script src="script.js"></script>
+          
+        </body>
 </html>
