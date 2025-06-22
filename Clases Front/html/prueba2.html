@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawCare Clínica Veterinaria - Cuidamos a tus mascotas como familia</title>
+    <meta name="description" content="Servicios veterinarios profesionales incluyendo consultas, vacunación, cirugías y hospedaje. Cuidamos a tus mascotas como si fueran familia.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --vet-green: #22c55e;
+            --vet-green-light: #4ade80;
+            --vet-blue: #3b82f6;
+            --vet-blue-light: #60a5fa;
+            --vet-teal: #14b8a6;
+            --vet-sage: #84cc16;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%);
+            padding-top: 120px;
+            padding-bottom: 80px;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .icon-checkup { background-color: var(--vet-blue); }
+        .icon-vaccine { background-color: var(--vet-teal); }
+        .icon-surgery { background-color: var(--vet-sage); }
+        .icon-boarding { background-color: var(--vet-green); }
+        
+        .btn-vet-primary {
+            background-color: var(--vet-green);
+            border-color: var(--vet-green);
+            font-weight: 600;
+            padding: 12px 30px;
+        }
+        
+        .btn-vet-primary:hover {
+            background-color: var(--vet-green-light);
+            border-color: var(--vet-green-light);
+        }
+        
+        .btn-vet-outline {
+            color: var(--vet-green);
+            border-color: var(--vet-green);
+            font-weight: 600;
+            padding: 12px 30px;
+        }
+        
+        .btn-vet-outline:hover {
+            background-color: var(--vet-green);
+            border-color: var(--vet-green);
+            color: white;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--vet-green) !important;
+        }
+        
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            margin-right: 10px;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+        
+        .social-facebook { background-color: #1877f2; }
+        .social-twitter { background-color: #1da1f2; }
+        .social-instagram { background-color: #e4405f; }
+        
+        .emergency-badge {
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item i {
+            color: var(--vet-green);
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background-color: #1f2937;
+            color: white;
+        }
+        
+        .logo-circle {
+            width: 45px;
+            height: 45px;
+            background-color: var(--vet-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Fijo -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="logo-circle">
+                    <i class="bi bi-heart-fill text-white"></i>
+                </div>
+                PawCare Clínica
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="#animales">Animales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="#propietarios">Propietarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="#tipos">Tipos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="#tratamientos">Tratamientos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="display-4 fw-bold text-dark mb-4">
+                        Cuidamos a tus mascotas como si fueran <span style="color: var(--vet-green);">familia</span>
+                    </h1>
+                    <p class="lead text-muted mb-4">
+                        Atención veterinaria profesional con compasión y experiencia. La salud y felicidad de tu mascota es nuestra máxima prioridad.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <button class="btn btn-vet-primary btn-lg">
+                            <i class="bi bi-calendar-check me-2"></i>Reservar Cita
+                        </button>
+                        <button class="btn btn-outline-success btn-vet-outline btn-lg">
+                            <i class="bi bi-telephone-fill me-2"></i>Emergencias
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/placeholder.svg?height=400&width=600" alt="Mascotas felices con veterinario" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-dark mb-3">Nuestros Servicios</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 600px;">
+                    Brindamos atención veterinaria integral para mantener a tus queridas mascotas saludables y felices durante toda su vida.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Consultas Generales -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="service-icon icon-checkup">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <h4 class="fw-semibold mb-3">Consultas Generales</h4>
+                        <p class="text-muted">Exámenes de salud integrales para asegurar el bienestar general de tu mascota y detección temprana de problemas.</p>
+                    </div>
+                </div>
+
+                <!-- Vacunación -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="service-icon icon-vaccine">
+                            <i class="bi bi-shield-fill-check"></i>
+                        </div>
+                        <h4 class="fw-semibold mb-3">Vacunación</h4>
+                        <p class="text-muted">Programas completos de vacunación para proteger a tus mascotas de enfermedades prevenibles y mantener su inmunidad.</p>
+                    </div>
+                </div>
+
+                <!-- Cirugías -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="service-icon icon-surgery">
+                            <i class="bi bi-scissors"></i>
+                        </div>
+                        <h4 class="fw-semibold mb-3">Cirugías</h4>
+                        <p class="text-muted">Procedimientos quirúrgicos avanzados realizados con equipos de última generación y los más altos estándares de atención.</p>
+                    </div>
+                </div>
+
+                <!-- Hospedaje -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="service-icon icon-boarding">
+                            <i class="bi bi-house-heart-fill"></i>
+                        </div>
+                        <h4 class="fw-semibold mb-3">Hospedaje</h4>
+                        <p class="text-muted">Instalaciones seguras y cómodas donde tus mascotas reciben cuidado amoroso mientras estás fuera.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Información de Contacto -->
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Información de Contacto</h5>
+                    <div class="contact-item">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Calle del Cuidado Animal 123, Ciudad Mascota, CM 12345</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>(555) 123-PETS</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span>info@pawcareclinica.com</span>
+                    </div>
+                </div>
+
+                <!-- Horarios -->
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Horarios de Atención</h5>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Lunes - Viernes:</span>
+                        <span>8:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Sábado:</span>
+                        <span>9:00 AM - 4:00 PM</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-4">
+                        <span>Domingo:</span>
+                        <span>Solo Emergencias</span>
+                    </div>
+                    <div class="emergency-badge">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                        Atención de Emergencia 24/7
+                    </div>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Síguenos</h5>
+                    <div class="mb-4">
+                        <a href="#" class="social-icon social-facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon social-twitter">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon social-instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                    <p class="text-muted small">
+                        © 2024 PawCare Clínica Veterinaria. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Smooth scrolling para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80; // Ajuste para el navbar fijo
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Cerrar el menú móvil al hacer clic en un enlace
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                    bsCollapse.hide();
+                }
+            });
+        });
+
+        // Efecto de cambio de color del navbar al hacer scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow');
+            } else {
+                navbar.classList.remove('shadow');
+            }
+        });
+    </script>
+</body>
+</html>

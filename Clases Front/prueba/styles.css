@@ -1,17 +1,3 @@
-#formularioCrear{
-
-    height: auto;
-    width: auto;
-    padding-left: 50px;
-    padding-top: 20px;
-}
-.form-control{
-    width: 200px;
-}
-.main-content {
-  padding-top: 100px; /* Ajusta según el tamaño real del navbar */
-}
-
 :root {
     --vet-green: #22c55e;
     --vet-green-light: #4ade80;
@@ -151,8 +137,3 @@ footer {
     justify-content: center;
     margin-right: 15px;
 }
-
-.img-fluid{
-    object-fit: contain;
-}
-
